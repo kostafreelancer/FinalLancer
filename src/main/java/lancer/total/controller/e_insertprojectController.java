@@ -5,12 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/c_login/*")
-public class LoginController {
-	
-	@RequestMapping(value = "login", method= RequestMethod.GET)
-	public void login(){
-	
+@RequestMapping("/e_insertproject/*")
+public class e_insertprojectController {
+
+		@RequestMapping(value = "e_insertproject", method= RequestMethod.GET)
+		public void insertproject(){
+			
+		}
 	}
-	
-}

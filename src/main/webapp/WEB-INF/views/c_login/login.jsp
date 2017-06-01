@@ -2,7 +2,11 @@
 	pageEncoding="UTF-8"%>
 
 <%@include file="../c_common/header.jsp" %>
-
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script type="text/javascript"
+	src="/resources/c_login_js/c_login.js"></script>
+	
     <div  id="conainer">
     	<div id="nav">
         	<div class="nav_txt">
