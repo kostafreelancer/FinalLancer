@@ -20,7 +20,7 @@ public class E_MypageController {
 	
 	@RequestMapping(value = "/e_info", method = RequestMethod.GET)
 	public void e_infoGET(){
-		
+		System.out.println("코믇바먼");
 	}
 	
 	@RequestMapping(value = "/e_project", method = RequestMethod.GET)
