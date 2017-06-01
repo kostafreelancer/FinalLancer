@@ -10,7 +10,7 @@
 		select nvl(max(f_num),0) from freelancer
 	</select>
 	
-	<insert id="insert_f_join" parameterType="F_join">
+	<insert id="insertF_join" parameterType="F_join">
 		insert into freelancer(
 			f_num, f_id, f_pwd, f_fname, f_name, f_birth, f_sex, 
 			f_hphone, f_phone, f_email, f_address, f_major, f_nowstate,
@@ -23,7 +23,7 @@
 		)
 	</insert>
 	
-	<insert id="insert_F_Job" parameterType="F_job">
+	<insert id="insertF_Job" parameterType="F_job">
 		insert into f_job values(
 		#{f_num}, #{job_id}
 		)
@@ -39,19 +39,14 @@
 		select max(e_num) from enterprise
 	</select>
 	
-	<insert id="insert_e_join" parameterType="E_join">
+	<insert id="insertE_join" parameterType="E_join">
 		insert into enterprise(
 			e_num, e_id , e_pwd, e_mail, e_name, e_ename, e_owner, e_score,
 			e_ownerfile, e_regno, e_phone, e_bf, manager_name, manager_hphone,
 			manager_mail, e_address, e_homepage, start_year, e_enum, 
 			e_listing, e_capital, e_sales, e_scale, e_licensefile, e_check
 		 )
-		values(
-<!-- 			30, 'snfl', '1234', 'wldnjf2000@naver.com', '지우너', '기업이름', '대표자', 3.14,
-			'/path', '123-1234-1234', '02-1234-2345', '제조업합니다', '매니저이름', '010-2222-3333',
-			'manager@naver.com', 'address', 'www.dfsdf.dfdd', 1992, 120,
-			'비상장', 2000, 200, '대기업', '/sdfsdf', 0 -->
-				
+		values(			
 			#{e_num}, #{e_id}, #{e_pwd}, #{e_mail}, #{e_name}, 
 			#{e_ename}, #{e_owner}, #{e_score}, #{e_ownerfile}, #{e_regno}, 
 			#{e_phone}, #{e_bf}, #{manager_name}, #{manager_hphone},
