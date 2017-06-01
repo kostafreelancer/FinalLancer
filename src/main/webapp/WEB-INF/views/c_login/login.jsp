@@ -2,7 +2,16 @@
 	pageEncoding="UTF-8"%>
 
 <%@include file="../c_common/header.jsp" %>
-
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script type="text/javascript"
+	src="/resources/c_login_js/c_login.js"></script>
+<link rel="stylesheet"
+	href="/resources/c_join_css/join.css"
+	type="text/css" media="screen" />
+	<link rel="stylesheet"
+	href="/resources/c_join_css/reset.css"
+	type="text/css" media="screen" />
     <div  id="conainer">
     	<div id="nav">
         	<div class="nav_txt">
