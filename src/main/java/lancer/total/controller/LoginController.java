@@ -11,6 +11,8 @@ public class LoginController {
 	@RequestMapping(value = "login", method= RequestMethod.GET)
 	public void login(){
 		System.out.println("으아아ㅏ");
+		System.out.println("망ㅁ암아ㅏ");
+		System.out.println("망망ㅁ아ㅏ");
 	}
 	
 }
