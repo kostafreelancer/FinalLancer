@@ -16,12 +16,25 @@ public class f_mainDAOImpl implements f_mainDAO {
 	@Inject
 	private SqlSession session;
 	
-	private static String namespace = "lancer.mapper.f_mainMapper";
+	private static String namespace = "lancer.mappers.f_mainMapper";
 
 	@Override
-	public List<member> getF_info() throws Exception {
+	public void getF_info(member m) throws Exception{
 		
-		return session.selectList(namespace + ".getF_info");
+		
+		session.selectList(namespace + ".getF_info", m);
+	}
+	
+	@Override
+	public int countFreelancer() throws Exception{
+		
+		return session.selectOne(namespace + ".countFreelancer");
+	}
+	
+	@Override
+	public int countProject() throws Exception{
+		
+		return session.selectOne(namespace + ".countProject");
 	}
 	
 	
