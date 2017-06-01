@@ -5,7 +5,11 @@
   
 <mapper namespace="lancer.mapper.f_mypageMapper">
 
-    
+    <select id="showFreelancerInfo" resultType="Freelancer" parameterType="int">
+		select * from freelancer where f_num = #{f_num}
+	</select>
+  	
+  	
   
 </mapper>  
 
