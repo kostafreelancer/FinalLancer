@@ -15,8 +15,8 @@ import lancer.total.service.c_loginService;
 @RequestMapping("/c_login/*")
 public class LoginController {
 	
-	/*@Inject
-	c_loginService service;*/
+	@Inject
+	c_loginService service;
 	
 	@RequestMapping(value = "login", method= RequestMethod.GET)
 	public void login(){
