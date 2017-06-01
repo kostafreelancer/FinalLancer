@@ -1,5 +1,5 @@
 package lancer.total.service;
 
-public class kwangsikservice {
+public class F_MypageService {
 
 }
