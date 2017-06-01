@@ -39,6 +39,4 @@ public class F_MypageController {
 		}
 		model.addAttribute("freelancer", freelancer);
 	}
-	
-	
 }
