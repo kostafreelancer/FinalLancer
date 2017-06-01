@@ -9,9 +9,9 @@
 		select count(*) from FREELANCER
 	</select>
 	
-<!-- 	<select id="countProject" resultType="int">
-		select count(*) from SIGN_PROJECT
-	</select> -->
+	<select id="countProject" resultType="int">
+		select count(*) from PROJECT
+	</select>
   
 </mapper>  
 
