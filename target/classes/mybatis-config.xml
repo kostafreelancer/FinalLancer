@@ -6,6 +6,7 @@
 
   <typeAliases>
     <package name="lancer.f_mypage.domain"/>    
+    <package name="lancer.f_main.domain"/>
   </typeAliases>
 
 
