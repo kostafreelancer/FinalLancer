@@ -19,10 +19,10 @@ public class e_mainDAOImpl implements e_mainDAO {
 		return session.selectOne(namespace+".countFreelancer");
 	}
 
-/*	@Override
+	@Override
 	public int countProject() throws Exception {
 		
 		return session.selectOne(namespace+".countPorject");
-	}*/
+	}
 
 }

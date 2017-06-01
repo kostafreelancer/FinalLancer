@@ -18,10 +18,10 @@ public class e_MainServiceImpl implements e_MainService {
 		return e_mainDao.countFreelancer();
 	}
 
-/*	@Override
+	@Override
 	public int countProject() throws Exception {
 		
 		return e_mainDao.countProject();
-	}*/
+	}
 
 }
