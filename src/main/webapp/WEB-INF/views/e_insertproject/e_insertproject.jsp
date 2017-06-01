@@ -5,19 +5,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/e_insertproject/e_insertproject_css/e_insertproject.css"
+<link rel="stylesheet" href="/resources/e_insertproject_css/e_insertproject.css"
 	type="text/css" media="screen" />
 	
-<link rel="stylesheet" href="${pageContext.request.contextPath}/e_insertproject/e_insertproject_css/e_insertproject.css"
+<link rel="stylesheet" href="/resources/e_insertproject_css/e_insertproject.css"
 	type="text/css" media="screen" />
 	
 	
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/e_insertproject/e_insertproject_js/e_insertproject.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/e_insertproject/e_insertproject_js/e_insertproject2.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/e_insertproject/e_insertproject_js/calendar.js"></script>
+<script type="text/javascript" src="/resources/e_insertproject_js/e_insertproject.js"></script>
+<script type="text/javascript" src="/resources/e_insertproject_js/e_insertproject2.js"></script>
+<script type="text/javascript" src="/resources/e_insertproject_js/calendar.js"></script>
 
 </head>
 <body>
