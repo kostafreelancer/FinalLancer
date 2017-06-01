@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<%-- 	<%@include file="../c_common/header_enterprise.jsp"%> --%>
+<%@include file="../c_common/header_enterprise.jsp"%>
 
 	<nav class="left_menu">
 	<div class="left_menu_title">
@@ -40,8 +40,8 @@
 	</div>
 	<div class="left_menu_content">
 		<ul class="left_menu_contents">
-			<li><a href="e_infoSelectAction.e_mypage">기업 정보</a></li>
-			<li><a href="e_projectListAction.e_mypage">프로젝트 관리</a></li>
+			<li><a href="e_info">기업 정보</a></li>
+			<li><a href="e_project">프로젝트 관리</a></li>
 		</ul>
 	</div>
 	</nav>
@@ -350,6 +350,6 @@
 	</form>
 	</section>
 
-<%-- 	<%@include file="../c_common/footer.jsp"%> --%>
+<%@include file="../c_common/footer.jsp"%>
 </body>
 </html>
