@@ -241,17 +241,17 @@ $(function(){
 										<td class="td_bor_bott"><input type="checkbox"
 											name="check" value="35"> 웹표준</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="35"> 파워포인트</td>
+											name="check" value="36"> 파워포인트</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="36"> 퍼블리싱</td>
+											name="check" value="37"> 퍼블리싱</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="37"> 포토샵편집</td>
+											name="check" value="38"> 포토샵편집</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="38"> 플래시</td>
+											name="check" value="39"> 플래시</td>
 									</tr>
 									<tr class="che_list011">
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="39"> 3D</td>
+											name="check" value="40"> 3D</td>
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
@@ -275,22 +275,22 @@ $(function(){
 									</colgroup>
 									<tr class="che_list011">
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="Oracle컨설턴트">
+											name="check" value="41">
 											Oracle컨설턴트</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="PM"> PM</td>
+											name="check" value="42"> PM</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="PMO"> PMO</td>
+											name="check" value="43"> PMO</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="SAP컨설턴트"> SAP컨설턴트</td>
+											name="check" value="44"> SAP컨설턴트</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="기획"> 기획</td>
+											name="check" value="45"> 기획</td>
 									</tr>
 									<tr class="che_list011">
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="모바일기획"> 모바일기획</td>
+											name="check" value="46"> 모바일기획</td>
 										<td class="td_bor_bott"><input type="checkbox"
-											name="check" value="웹기획"> 웹기획</td>
+											name="check" value="47"> 웹기획</td>
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
