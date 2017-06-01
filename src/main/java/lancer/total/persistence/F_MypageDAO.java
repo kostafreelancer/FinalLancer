@@ -15,7 +15,7 @@ public class F_MypageDAO {
 	
 	private static String namespace = "lancer.mapper.f_mypageMapper";
 
-	/*public Freelancer showFreelancerInfo(int f_num) throws Exception {
+	public Freelancer showFreelancerInfo(int f_num) throws Exception {
 		return session.selectOne(namespace + ".showFreelancerInfo", f_num);
-	}*/
+	}
 }

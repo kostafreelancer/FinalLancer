@@ -13,7 +13,7 @@ public class F_MypageService {
 	@Inject
 	private F_MypageDAO dao;
 
-	/*public Freelancer showFreelancerInfo(int f_num) throws Exception{
+	public Freelancer showFreelancerInfo(int f_num) throws Exception{
 		return dao.showFreelancerInfo(f_num);
-	}*/
+	}
 }
