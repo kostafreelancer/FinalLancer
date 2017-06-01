@@ -6,5 +6,7 @@ import lancer.f_main.domain.member;
 
 public interface f_mainService {
 	
-	public List<member> getF_info() throws Exception;
+	public void getF_info(member m) throws Exception;
+	public int countFreelancer() throws Exception;
+	public int countProject() throws Exception;
 }

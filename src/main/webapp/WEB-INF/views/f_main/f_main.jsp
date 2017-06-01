@@ -114,7 +114,7 @@ function drawMultSeries() {
 							<h1>--분야별 프리랜서 활동 명수, 현재는 프리랜서 회원 목록 출력--</h1><br>
 							<!-- 삭제영역 끝 -->
 							<th>							
-							<td>&nbsp;&nbsp;${member0 }</td>
+							<td>&nbsp;&nbsp;${m }</td>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<td>${member1 }</td>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -162,13 +162,13 @@ function drawMultSeries() {
 
 		</div>
 	</div>
-	<%-- <h1> 테스트영역</h1>
-		<form action="f_main.fm" method="post">
-		<input type="text" value="${member0}">
+	<<h1> 테스트영역</h1>
+		<form action="f_main" method="post">
+		<input type="text" value="${m }">
 		<input type="submit" value="a" id="test">
 		</form>
 		<input type="text" value="${member1 }">
-		<input type="text" value="${count }"> --%>
+		<input type="text" value="${count }">
 	</section>
 	<%@ include file="../c_common/footer.jsp"%>
 

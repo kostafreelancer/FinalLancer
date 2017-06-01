@@ -1,10 +1,10 @@
 package lancer.total.persistence;
 
-import java.util.List;
-
 import lancer.f_main.domain.member;
 
 public interface f_mainDAO {
 
-	public List<member> getF_info() throws Exception;
+	public void getF_info(member m) throws Exception;
+	public int countFreelancer() throws Exception;
+	public int countProject() throws Exception;
 }
