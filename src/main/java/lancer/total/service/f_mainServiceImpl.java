@@ -16,10 +16,22 @@ public class f_mainServiceImpl implements f_mainService {
 	f_mainDAO dao;
 
 	@Override
-	public List<member> getF_info() throws Exception {
+	public void getF_info(member m) throws Exception{
 		
-		return dao.getF_info();
+		
+		dao.getF_info(m);
 	}
 	
+	@Override
+	public int countFreelancer() throws Exception{
+		
+		return dao.countFreelancer();
+	}
+	
+	@Override
+	public int countProject() throws Exception{
+		
+		return dao.countProject();
+	}
 	
 }
