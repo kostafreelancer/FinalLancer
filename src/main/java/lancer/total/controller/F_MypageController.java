@@ -1,5 +1,7 @@
 package lancer.total.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
@@ -7,7 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import lancer.f_mypage.domain.ApplyProject;
+import lancer.f_mypage.domain.Career;
+import lancer.f_mypage.domain.Certificate;
 import lancer.f_mypage.domain.Freelancer;
+import lancer.f_mypage.domain.School;
 import lancer.total.service.F_MypageService;
 
 @Controller
@@ -38,5 +44,42 @@ public class F_MypageController {
 			model.addAttribute("address" + (i+1), address[i]);
 		}
 		model.addAttribute("freelancer", freelancer);
+		
+		List<Integer> joblist = service.showFreelancerJobInfo(3);	
+		List<Career> career = service.showCareerInfo(3);
+		List<School> school = service.showSchoolInfo(3);
+		List<Certificate> certificate = service.showCertiInfo(3);
+		/*List<ApplyProject> applyproject = service.getApplyProject(3);*/
+
+		model.addAttribute("joblist", joblist);	
+		
+		if(career.size()==0){
+			model.addAttribute("careercheck", "0");
+		}else{
+			model.addAttribute("career", career);
+		}
+		
+		if(school.size()==0){
+			model.addAttribute("schoolcheck", "0");
+		}else{
+			model.addAttribute("school", school);
+		}
+		
+		if(certificate.size()==0){
+			model.addAttribute("certificatecheck", "0");
+		}else{
+			model.addAttribute("certificate", certificate);
+		}
+		
+		/*if(applyproject.size()==0){
+			model.addAttribute("applyprojectcheck", "0");
+		}else{
+			model.addAttribute("applyproject", applyproject);
+		}*/
+		
+		
+		
+		
+		
 	}
 }
