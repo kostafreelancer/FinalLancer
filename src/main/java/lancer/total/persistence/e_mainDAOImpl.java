@@ -22,7 +22,7 @@ public class e_mainDAOImpl implements e_mainDAO {
 	@Override
 	public int countProject() throws Exception {
 		
-		return session.selectOne(namespace+".countPorject");
+		return session.selectOne(namespace+".countProject");
 	}
 
 }
