@@ -54,7 +54,8 @@
 
 	<div class="news2tab">
 		<div class="news2">
-			<a
+		${str }
+			<!-- <a
 				href="http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=105&oid=092&aid=0002115920">
 				<img
 				src="http://imgnews.naver.net/image/origin/092/2017/04/27/2115920.jpg?type=nf136_90">
@@ -62,7 +63,7 @@
 				href="http://news.naver.com/main/read.nhn?mode=LSD&mid=shm&sid1=105&oid=092&aid=0002115920">
 				<h4>삼성전자 "갤럭시S8 붉은 액정, 불량 아니다"</h4>
 			</a> (지디넷코리아=이은정 기자)삼성전자는 27일 열린 1분기 실적 컨퍼런스 콜에서 갤럭시S8 시리즈의 붉은 액정 현상이 제품
-			불량은 아니라고 밝혔다. 삼성전자는 “(갤럭시S8 시리즈의)…
+			불량은 아니라고 밝혔다. 삼성전자는 “(갤럭시S8 시리즈의)… -->
 		</div>
 	</div>
 
