@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <typeAliases>
+    <package name="lancer.f_mypage.domain"/>    
+    <package name="lancer.f_main.domain"/>
+    <package name="lancer.c_login.domain"/>
+    <package name="lancer.e_insertproject.domain"/>
+  </typeAliases>
+
+
+</configuration>
+
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
@@ -13,3 +31,4 @@
 
 </configuration>
 
+>>>>>>> branch 'master' of https://github.com/kostafreelancer/FinalLancer.git
