@@ -27,10 +27,11 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/f_mypage/*"/>
+			<mapping path="/e_mypage/*"/>
 			<beans:ref bean="AuthInterceptor"/>
 		</interceptor>
 		<interceptor>
-			<mapping path="/c_login/login"/>
+			<mapping path="/c_login/loginpost"/>
 			<beans:ref bean="LoginInterceptor"/>
 		</interceptor>
 	</interceptors>	

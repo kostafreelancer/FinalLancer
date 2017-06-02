@@ -20,7 +20,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 		System.out.println("여기는 언제 들어 오지??");
 		HttpSession session = request.getSession();
 		System.out.println(session.getAttribute("idnetity")+"아이덴티티");
-		if(session.getAttribute("idnetity") != null){
+		System.out.println(session.getAttribute("client")+"이것도 널이야?");
+		if(session.getAttribute("client") != null){
 			System.out.println("identity에 들어 오지?");
 			logger.info("new login success");
 			System.out.println("new login success");

@@ -31,12 +31,16 @@ public class LoginController {
 	public void login(){
 	
 	}
+	@RequestMapping(value="loginpost" , method= RequestMethod.GET)
+	public void loginpost(){
+		
+	}
 	@RequestMapping(value="/insert.c_login")
 	public String check_login(c_loginVO vo,@ModelAttribute("checking") String checked,Model model,HttpSession session){
 		checking_identity identity = new checking_identity();
+		
 		if(checked.equals("freelancer")){
 			/*if(service.select_f_login(vo) == null){
-				
 				return "redirect:/c_login/login";
 			}*/
 			identity.setFree(service.select_f_login(vo));
@@ -52,8 +56,9 @@ public class LoginController {
 			identity.setIdentity(checked);
 			session.setAttribute("client",identity.getEnter());
 			session.setAttribute("identity", identity);
-			return "redirect:/e_main/e_main";
+			
 		}
-		return "redirect:/f_main/f_main";
+		System.out.println("여기가 실행되고 인터셉터가 실행이 되야 한다!");
+		return "redirect:/c_login/loginpost";
 	}
 }

@@ -24,14 +24,14 @@
 					href="f_name.mc">고객 센터</a></li>
 				<li class="header_join"><img alt="join_img"
 					src="/resources/c_common_img/header_join_icon.jpg"> <a
-					href="e_joinForm.e_join">회원가입</a></li>
+					href="c_join/c_join_step1">회원가입</a></li>
 				<li class="login_checking"><img alt="log_img"
 					src="/resources/c_common_img/header_log_icon01.jpg"> <a
-					href="remove_session.c_login">로그인</a></li>
+					href="c_login/login">로그인</a></li>
 
 				<li><img alt="home_img"
 					src="/resources/c_common_img/header_home_icon01.jpg"> <a
-					href="f_main.fm">홈</a></li>
+					href="f_main/f_main">홈</a></li>
 			</ul>
 
 		</div>
