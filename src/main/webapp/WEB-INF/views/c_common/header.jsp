@@ -21,7 +21,7 @@
 			<ul class="header_top_menus">
 				<li><img alt="center_img"
 					src="/resources/c_common_img/header_center_icon.jpg"> <a
-					href="f_name.mc">고객 센터</a></li>
+					href="/c_membercenter/member_centerMain">고객 센터</a></li>
 				<li class="header_join"><img alt="join_img"
 					src="/resources/c_common_img/header_join_icon.jpg"> <a
 					href="c_join/c_join_step1">회원가입</a></li>
