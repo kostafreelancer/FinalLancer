@@ -13,6 +13,7 @@ import org.springframework.web.multipart.support.RequestPartServletServerHttpReq
 
 import jdk.nashorn.internal.ir.RuntimeNode.Request;
 import lancer.c_login.domain.c_loginVO;
+import lancer.c_login.domain.c_login_enterpriseVO;
 import lancer.c_login.domain.c_login_freelancerVO;
 import lancer.c_login.domain.checking_identity;
 import lancer.f_mypage.domain.Freelancer;
@@ -53,7 +54,6 @@ public class LoginController {
 			session.setAttribute("identity", identity);
 			return "redirect:/e_main/e_main";
 		}
-		
 		return "redirect:/f_main/f_main";
 	}
 }

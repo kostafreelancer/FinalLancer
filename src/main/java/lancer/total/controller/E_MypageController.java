@@ -1,6 +1,7 @@
 package lancer.total.controller;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import lancer.c_login.domain.c_login_enterpriseVO;
 import lancer.total.service.E_MypageService;
 
 @Controller
@@ -19,8 +21,40 @@ public class E_MypageController {
 	private E_MypageService service;
 	
 	@RequestMapping(value = "/e_info", method = RequestMethod.GET)
-	public void e_infoGET(){
-		System.out.println("코믇바먼");
+	public void e_infoGET(Model model,HttpSession session){
+		
+	/*	c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
+		System.out.println(enterprise.getE_mail());*/
+		model.addAttribute("client", session.getAttribute("client"));
+		
+		/*String[] e_mail = enterprise.getE_mail().split("@");
+		model.addAttribute("e_mail_1", e_mail[0]);
+		model.addAttribute("e_mail_2", e_mail[1]);
+				
+		String[] regno = enterprise.getE_regno().split("-");
+		model.addAttribute("regno_1", regno[0]);
+		model.addAttribute("regno_2", regno[1]);
+		model.addAttribute("regno_3", regno[2]);
+				
+		String[] e_phone = enterprise.getE_phone().split("-");
+		model.addAttribute("e_phone_1", e_phone[0]);
+		model.addAttribute("e_phone_2", e_phone[1]);
+		model.addAttribute("e_phone_3", e_phone[2]);
+				
+		String[] manager_hphone = enterprise.getManager_hphone().split("-");
+		model.addAttribute("manager_hphone_1", manager_hphone[0]);
+		model.addAttribute("manager_hphone_2", manager_hphone[1]);
+		model.addAttribute("manager_hphone_3", manager_hphone[2]);
+				
+		String[] manager_mail = enterprise.getManager_mail().split("@");
+		model.addAttribute("manager_mail_1", manager_mail[0]);
+		model.addAttribute("manager_mail_2", manager_mail[1]);
+			
+		String[] e_address = enterprise.getE_address().split("&");
+		model.addAttribute("e_address_1", e_address[0]);
+		model.addAttribute("e_address_2", e_address[1]);
+		model.addAttribute("e_address_3", e_address[2]);*/
+		
 	}
 	
 	@RequestMapping(value = "/e_project", method = RequestMethod.GET)
