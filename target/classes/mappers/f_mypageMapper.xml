@@ -101,12 +101,13 @@
 	</select>
 	
 	<select id="getApplyProject" parameterType="int" resultType="ApplyProject">
-		select f_pr_num, p_name, manager_hphone, f_pr_date, state from sign_project sp, f_project_request fpr, e_request_project erp, enterprise e 
-		where sp.E_PR_NUM = fpr.F_PR_NUM and sp.E_PR_NUM=erp.E_PR_NUM and erp.e_num=e.e_num and sp.state='모집중' and fpr.f_num = #{f_num}
+		select c_num, p_name, manager_hphone, c_request_date, contract_check_state from project pro, contract con, enterprise e 
+		where pro.p_num = con.p_num and pro.e_num = e.e_num and con.contract_check_state=0 and con.f_num = #{f_num}
+		
 	</select>
 	
 	<delete id="deleteApplyProject" parameterType="int">
-		delete from f_project_request where f_pr_num = #{f_pr_num}
+		delete from contract where f_pr_num = #{f_pr_num}
 	</delete>
 
 	<select id="getTemp" resultType="Date">
@@ -114,13 +115,6 @@
 	</select>
   
 </mapper>  
-
-
-
-
-
-
-
 
 
 

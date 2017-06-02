@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- <link rel="stylesheet" href="f_mypage_css/myInfo.css" type="text/css" media="screen" /> -->
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/f_mypage/f_mypage_css/myInfo.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/f_mypage_css/myInfo.css" type="text/css" media="screen" />
 
 <title>내 정보</title>
 
@@ -17,11 +17,11 @@
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> -->
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 
-<script type="text/javascript" src="f_mypage_js/myInfo.js"></script>
-<script type="text/javascript" src="f_mypage_js/my.js"></script>
-<script src="${pageContext.request.contextPath}/c_common/c_common_js/header.js"></script>
-<script src="${pageContext.request.contextPath}/f_mypage/f_mypage_js/myInfo.js"></script> 
-<script src="${pageContext.request.contextPath}/f_mypage/f_mypage_js/my.js"></script>
+<!-- <script type="text/javascript" src="f_mypage_js/myInfo.js"></script>
+<script type="text/javascript" src="f_mypage_js/my.js"></script> -->
+<script src="${pageContext.request.contextPath}/resources/c_common_js/header.js"></script>
+<script src="${pageContext.request.contextPath}/resources/f_mypage_js/myInfo.js"></script> 
+<script src="${pageContext.request.contextPath}/resources/f_mypage_js/my.js"></script>
  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -445,7 +445,7 @@ $(function(){
 											<td class="td_bor_bott">&nbsp;</td>
 										</tr>
 									</tbody>
-								</table> <!--img src="../img/sb_category.gif" width="87" height="18" align="absmiddle"-->
+								</table> <!--img src="../img/ sb_category.gif" width="87" height="18" align="absmiddle"-->
 							</td>
 						</tr>
 						<tr class="line_bottom" id="last_table">
