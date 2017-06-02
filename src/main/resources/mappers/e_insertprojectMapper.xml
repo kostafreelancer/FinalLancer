@@ -6,11 +6,11 @@
 <mapper namespace="lancer.mappers.e_insertprojectMapper">
 
 <select id="getnum" resultType="int">
-		select nvl(max(e_pr_num),0) from e_request_project
+		select nvl(max(e_pr_num),0) from project
 	</select>
 	
 	<insert id="insertProject" parameterType="lancer.e_insertproject.domain.E_Insert">
-		insert into e_request_project(
+		insert into project(
 		e_pr_num,e_num,p_name, p_content,p_lowerAge, p_upperAge,p_academic,p_requireNum,p_regDate,p_exDate,p_lowerCost,p_upperCost,p_startDate,p_endDate,p_location,p_experience
 		)
 		values(
