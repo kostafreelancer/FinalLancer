@@ -9,6 +9,8 @@
     <package name="lancer.f_main.domain"/>
     <package name="lancer.c_login.domain"/>
     <package name="lancer.e_insertproject.domain"/>
+    <package name="lancer.c_join.domain"/>
+    
   </typeAliases>
 
 
