@@ -12,9 +12,8 @@
 <link rel="stylesheet" href="../c_common/footer.css" type="text/css" media="screen" />
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="c_join_js/c_join_step3.js"></script>
-<script type="text/javascript" src="../common/header.js"></script>
-<script type="text/javascript" src="c_join_js/zipAddress.js"></script>
+<script type="text/javascript" src="../../../resources/c_join_js/c_join_step3.js"></script>
+<script type="text/javascript" src="../../../resources/c_join_js/zipAddress.js"></script>
  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript">
 /* function inputIdChk(){
@@ -70,7 +69,7 @@
 					</p>
 				</div>
 				<table class="tb_st01">
-					<form name="userInfo" method="post" action="e_joinAction.e_join">
+					<form name="userInfo" method="post" action="e_join_step3">
 						<input type="hidden" name="fm_type" value="바이어"> 
 						<input type="hidden" name="fm_format" value="기업"> 
 						<input type="hidden" name="fm_str"
@@ -272,17 +271,17 @@
 							<th><span class="txt_or">*</span> 회사주소</th>
 							<td colspan="5">
 								<div class="mb10">
-									<label for="address1"></label><input type="text" id="address1" 
-									name="address1" class="wid60" title="주소검색 새창" readonly=""> 
+									<label for="e_address1"></label><input type="text" id="e_address1" 
+									name="e_address1" class="wid60" title="주소검색 새창" readonly=""> 
 									<input type = "button" onClick = "openDaumZipAddress()" value = "주소 찾기" class="btn_add"/>
 								</div>
 								<div class="mb10">
-									<label for="address2"></label> 
-										<input type="text" id="address2" name="address2" class="wid06">
+									<label for="e_address2"></label> 
+										<input type="text" id="e_address2" name="e_address2" class="wid06">
 								</div>
 								<div class="mb10">
-									<label for="address3"></label> 
-										<input type="text" id="address3" name="address3" class="wid06">
+									<label for="e_address3"></label> 
+										<input type="text" id="e_address3" name="e_address3" class="wid06">
 								</div>
 							</td>
 						</tr>

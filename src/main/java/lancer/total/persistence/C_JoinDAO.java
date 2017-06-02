@@ -13,7 +13,7 @@ public interface C_JoinDAO {
 	public List<String> getAllF_Id()throws Exception;
 	public int insertF_Job(F_job f_job)throws Exception;
 	//±â¾÷
-	int insertE_join(E_join e_join)throws Exception;
+	void insertE_join(E_join e_join)throws Exception;
 	public Integer getE_num()throws Exception;
 	public List<String> getAllE_Id()throws Exception;
 }

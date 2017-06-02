@@ -41,8 +41,8 @@ public class C_JoinDAOImpl implements C_JoinDAO{
 	}
 
 	@Override
-	public int insertE_join(E_join e_join) throws Exception {
-		return session.insert(namespace+".insertE_join", e_join);
+	public void insertE_join(E_join e_join) throws Exception {
+		session.insert(namespace+".insertE_join", e_join);
 	}
 
 	@Override

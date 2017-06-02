@@ -38,8 +38,8 @@ public class C_JoinServiceImpl implements C_JoinService{
 	}
 
 	@Override
-	public int insertE_join(E_join e_join) throws Exception {
-		return dao.insertE_join(e_join);
+	public void insertE_join(E_join e_join) throws Exception {
+		dao.insertE_join(e_join);
 	}
 
 	@Override

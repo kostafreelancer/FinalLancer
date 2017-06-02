@@ -29,6 +29,7 @@ public class F_join implements Serializable{
 	private String f_nowstate;
 	private String f_recentlogin;
 	private double  f_score;
+	private String[] fm_new_keyword;
 		
 	
 	public F_join(){}
@@ -38,7 +39,7 @@ public class F_join implements Serializable{
 			String f_hphone, String f_hphone1, String f_hphone2, String f_hphone3, String f_phone, String f_phone1,
 			String f_phone2, String f_phone3, String f_email, String f_email1, String f_email2, String f_address,
 			String f_address1, String f_address2, String f_address3, String f_major, String f_nowstate,
-			String f_recentlogin, double f_score) {
+			String f_recentlogin, double f_score, String[] fm_new_keyword) {
 		super();
 		this.f_num = f_num;
 		this.f_id = f_id;
@@ -66,6 +67,7 @@ public class F_join implements Serializable{
 		this.f_nowstate = f_nowstate;
 		this.f_recentlogin = f_recentlogin;
 		this.f_score = f_score;
+		this.fm_new_keyword = fm_new_keyword;
 	}
 
 
@@ -329,8 +331,16 @@ public class F_join implements Serializable{
 	}
 
 
-	
-	
+	public String[] getFm_new_keyword() {
+		return fm_new_keyword;
+	}
+
+
+	public void setFm_new_keyword(String[] fm_new_keyword) {
+		this.fm_new_keyword = fm_new_keyword;
+	}
+
+
 	
 }
 

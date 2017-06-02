@@ -15,7 +15,7 @@ public interface C_JoinService {
 
 	public int insertF_Job(F_job f_job) throws Exception;
 
-	public int insertE_join(E_join e_join) throws Exception; 
+	public void insertE_join(E_join e_join) throws Exception; 
 
 	public Integer getE_num() throws Exception;
 
