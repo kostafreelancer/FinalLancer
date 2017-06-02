@@ -7,14 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"
-	href="/Matching_Project/c_common/c_common_css/header.css"
+	href="/resources/c_common_css/header.css"
 	type="text/css" media="screen" />
 <script type="text/javascript"
 	src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script type="text/javascript"
-	src="/Matching_Project/c_common/c_common_js/header.js"></script>
+	src="/resources/c_common_js/header.js"></script>
 <script type="text/javascript"
-	src="/Matching_Project/c_common/c_common_js/header_second.js"></script>
+	src="/resources/c_common_js/header_second.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -24,15 +24,15 @@
 			</div>
 			<ul class="header_top_menus">
 				<li><img alt="center_img"
-					src="/Matching_Project/c_common/c_common_img/header_center_icon.jpg">
+					src="/resources/c_common_img/header_center_icon.jpg">
 					<a href="f_name.mc">고객
 						센터</a></li>
 	
 				<li><img alt="log_img"
-					src="/Matching_Project/c_common/c_common_img/header_log_icon01.jpg">
+					src="/resources/c_common_img/header_log_icon01.jpg">
 					<a href="remove_session.c_login">로그 아웃</a></li>
 				<li><img alt="home_img"
-					src="/Matching_Project/c_common/c_common_img/header_home_icon01.jpg">
+					src="/resources/c_common_img/header_home_icon01.jpg">
 					<!-- <a href="/Matching_Project/e_main/e_main.jsp">홈</a></li> -->
 					<a href="e_maincount.e_main">홈</a></li>
 			</ul>
