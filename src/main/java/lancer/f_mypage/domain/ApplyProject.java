@@ -7,17 +7,17 @@ public class ApplyProject implements Serializable{
 	private String p_name;
 	private String manager_hphone;
 	private String c_request_date;
-	private String contract_check_state;
+	private String state;
 	
-	public ApplyProject(){}
-
-	public ApplyProject(int f_pr_num, String p_name, String manager_hphone, String f_pr_date, String state) {
+	public ApplyProject(){};
+	
+	public ApplyProject(int c_num, String p_name, String manager_hphone, String c_request_date, String state) {
 		super();
 		this.c_num = c_num;
 		this.p_name = p_name;
 		this.manager_hphone = manager_hphone;
 		this.c_request_date = c_request_date;
-		this.contract_check_state = contract_check_state;
+		this.state = state;
 	}
 
 	public int getC_num() {
@@ -52,12 +52,14 @@ public class ApplyProject implements Serializable{
 		this.c_request_date = c_request_date;
 	}
 
-	public String getContract_check_state() {
-		return contract_check_state;
+	public String getState() {
+		return state;
 	}
 
-	public void setContract_check_state(String contract_check_state) {
-		this.contract_check_state = contract_check_state;
+	public void setState(String state) {
+		this.state = state;
 	}
+	
+	
 	
 }

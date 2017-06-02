@@ -60,6 +60,7 @@ $(function(){
 				<li><a href="showScheduleInfo.f_mypage?f_num=${client.f_num}">일정 관리</a></li>
 				<li><a href="/Matching_Project/f_mypage/accountingManager.jsp?f_num=${client.f_num}">회계 관리</a></li>
 				<li><a href="showFreelancerInfo.f_mypage?f_num=${client.f_num}">내 정보</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -797,11 +798,11 @@ $(function(){
 					<c:forEach var="myApplyProject" items="${applyproject}">
 						
 						 <form method="post" action="deleteApplyProject.f_mypage">
-						 <input type="text" hidden name="f_pr_num" value="${myApplyProject.f_pr_num}">
+						 <input type="text" hidden name="f_pr_num" value="${myApplyProject.c_num}">
 						 <tr>							
 							<td>${myApplyProject.p_name}</td>
 							<td>${myApplyProject.manager_hphone}</td>
-							<td>${myApplyProject.f_pr_date}</td>
+							<td>${myApplyProject.c_request_date}</td>
 							<td>${myApplyProject.state}</td>
 							<td class="last"><input type="submit" value="지원 취소"></td>
 						</tr>
