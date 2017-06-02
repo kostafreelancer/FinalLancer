@@ -51,15 +51,17 @@
 		</div>
 		<div id="active_inf">
 			<ul id="tabs">
-				<li><a href="#" title="tab1">FAQ</a></li>
-				<li><a href="#" title="tab2">E-mail 문의</a></li>
+				<li><a href="#" title="tab1">문의내용</a></li>
+				<li><a href="#" title="tab2">1:1문의</a></li>
 
 			</ul>
 
 			<div id="content">
 				<div id="tab1">
-					<h2>FAQ</h2>
-					<h2>어코디언 형식의 FAQ 메뉴 작성예정.</h2>
+					<h3>1:1문의</h3>
+					<ul class="ask_text">
+						<li>문의하신 내용의 답변을 확인할 수 있습니다.</li>
+					</ul>
 				</div>
 				<div id="tab2">
 
