@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="c_join_css/join.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="c_join_css/reset.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="../common/header.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="../common/footer.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../resources/c_join_css/join.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet" href="../../../resources/c_join_css/reset.css" type="text/css"
+	media="screen" />
+<link rel="stylesheet" href="../c_common/header.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../c_common/footer.css" type="text/css" media="screen" />
+
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 <script type="text/javascript" src="../common/header.js"></script>
