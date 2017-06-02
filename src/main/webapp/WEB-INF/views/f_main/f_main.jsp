@@ -25,7 +25,7 @@ function drawMultSeries() {
       var data = google.visualization.arrayToDataTable([
         ['주제', '4월', ''],
         ['프리랜서', ${count}, 0],
-        ['프로젝트', ${count_p}, 0],
+        ['프로젝트', ${countP}, 0],
         ['3', 0, 0],
         ['4', 0, 0],
         ['5', 0, 0]
@@ -129,7 +129,7 @@ function drawMultSeries() {
 			<div id="tab2">
 				<h2>프로젝트 정보</h2>
 				<h3>현재 등록된 프로젝트 수</h3>
-				<h3>현재 등록된 프로젝트 수는 ${count_p }개 입니다.</h3>
+				<h3>현재 등록된 프로젝트 수는 ${countP }개 입니다.</h3>
 				<img alt="" src="/Matching_Project/f_main/f_main_img/icon01_off.png"> <img alt=""
 					src="/Matching_Project/f_main/f_main_img/icon02_off.png"> <img alt=""
 					src="/Matching_Project/f_main/f_main_img/icon03_off.png"> <img alt=""

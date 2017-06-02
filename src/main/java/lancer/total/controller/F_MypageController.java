@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import lancer.f_mypage.domain.ApplyProject;
 import lancer.f_mypage.domain.Career;
@@ -23,7 +24,7 @@ public class F_MypageController {
 	@Inject
 	private F_MypageService service;
 	
-	@RequestMapping(value="/myInfo")
+	@RequestMapping(value="/myInfo", method=RequestMethod.GET)
 	public void showFreelancerInfo(HttpSession session, Model model) throws Exception{
 		//Freelancer freelancer = service.showFreelancerInfo((Integer)session.getAttribute("id"));
 		Freelancer freelancer = service.showFreelancerInfo(3);
@@ -49,7 +50,7 @@ public class F_MypageController {
 		List<Career> career = service.showCareerInfo(3);
 		List<School> school = service.showSchoolInfo(3);
 		List<Certificate> certificate = service.showCertiInfo(3);
-		/*List<ApplyProject> applyproject = service.getApplyProject(3);*/
+		List<ApplyProject> applyproject = service.getApplyProject(3);
 
 		model.addAttribute("joblist", joblist);	
 		
@@ -71,14 +72,12 @@ public class F_MypageController {
 			model.addAttribute("certificate", certificate);
 		}
 		
-		/*if(applyproject.size()==0){
+		if(applyproject.size()==0){
 			model.addAttribute("applyprojectcheck", "0");
 		}else{
 			model.addAttribute("applyproject", applyproject);
-		}*/
-		
-		
-		
+		}
+		System.out.println(applyproject.get(0).getState());
 		
 		
 	}

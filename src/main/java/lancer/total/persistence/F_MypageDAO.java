@@ -42,10 +42,10 @@ public class F_MypageDAO {
 		return session.selectList(namespace + ".showCertiInfo", f_num);
 	}
 	
-/*	public List<ApplyProject> getApplyProject(int f_num) throws Exception{
+	public List<ApplyProject> getApplyProject(int f_num) throws Exception{
 		return session.selectList(namespace + ".getApplyProject", f_num);
 	}
-	*/
+	
 
 	
 	

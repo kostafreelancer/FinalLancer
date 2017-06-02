@@ -249,7 +249,28 @@ h1 {
 	line-height: 25px;
 }
 
+#tab1>h3 {
+	padding: 30px 0 10px 0;
+	clear: both;
+	font-size: 20px;
+	border-bottom: 1px solid #d6d6d6;
+	overflow: hidden;
+	margin-bottom: 20px;
+	color: #2257ad;
+	line-height: 25px;
+}
+
+
 .email_text {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+	display: inline;
+	border-bottom: 1px solid #d6d6d6;
+	
+}
+
+.ask_text {
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 20px;

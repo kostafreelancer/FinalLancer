@@ -38,8 +38,8 @@ public class F_MypageService {
 	public List<Certificate> showCertiInfo(int f_num) throws Exception{
 		return dao.showCertiInfo(f_num);
 	}
-	/*
+	
 	public List<ApplyProject> getApplyProject(int f_num) throws Exception{
 		return dao.getApplyProject(f_num);
-	}*/
+	}
 }
