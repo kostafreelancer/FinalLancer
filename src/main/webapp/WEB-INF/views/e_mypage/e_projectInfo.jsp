@@ -5,16 +5,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_projectInfo.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_projectInfo.css"
 	type="text/css" media="screen" />
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_leftmenu.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
-<link rel="stylesheet" href="../../../resources/e_mypage_css/memberlist.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/memberlist.css"
 	type="text/css" media="screen" />
 
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/tabs.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/e_projectInfo.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/tabs.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/e_projectInfo.js"></script>
 
 <title>Insert title here</title>
 <script type="text/javascript">
@@ -257,7 +257,7 @@ $(function(){
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
 									</tr>
-								</table> <!--img src="../img/sb_category.gif" width="87" height="18" align="absmiddle"-->
+								</table>
 							</td>
 						</tr>
 						<tr class="line_bottom">
@@ -295,7 +295,7 @@ $(function(){
 										<td class="td_bor_bott">&nbsp;</td>
 										<td class="td_bor_bott">&nbsp;</td>
 									</tr>
-								</table> <!--img src="../img/sb_category.gif" width="87" height="18" align="absmiddle"-->
+								</table>
 							</td>
 						</tr>
 
@@ -351,7 +351,7 @@ $(function(){
 					</tbody>
 				</table>
 			</div>
-			<!-- //tb_box : e -->
+			
 
 			<div class="btn_box">
 				<input class="btn btn-lg btn-default js-disable-on-click"

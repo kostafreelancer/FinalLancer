@@ -5,9 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
-import org.springframework.transaction.annotation.Transactional;
-
+import lancer.e_mypage.domain.Project;
 import lancer.total.persistence.E_MypageDao;
 
 @Service
@@ -16,6 +14,18 @@ public class E_MypageService{
 	@Inject
 	private E_MypageDao dao;
 	
+	public List<Project> listProjectReady(int e_num) throws Exception {
+		System.out.println(e_num + "서비스");
+		return dao.listProjectReady(e_num);
+	}
+	
+	public List<Project> listProjectDoing(int e_num) throws Exception {
+		return dao.listProjectDoing(e_num);
+	}
+	
+	public List<Project> listProjectDone(int e_num) throws Exception {
+		return dao.listProjectDone(e_num);
+	}
 	
 	
 	

@@ -12,13 +12,13 @@
 <link rel="stylesheet" href="e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
 	
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_project.css" type="text/css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_project.css" type="text/css"
 	media="screen" />
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_leftmenu.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
 
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/tabs.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/tabs.js"></script>
 
 </head>
 <body>
@@ -82,7 +82,7 @@
 					<c:forEach var="p" items="${readyList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="e_projectSelectAction.e_mypage?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>
@@ -128,7 +128,7 @@
 						<c:forEach var="p" items="${doingList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="e_projectSelectAction.e_mypage?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>
@@ -174,7 +174,7 @@
 						<c:forEach var="p" items="${doneList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="e_projectSelectAction.e_mypage?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>

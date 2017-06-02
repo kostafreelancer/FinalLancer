@@ -11,19 +11,19 @@
 
 	
 
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_info.css" type="text/css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_info.css" type="text/css"
 	media="screen" />
-	<link rel="stylesheet" href="../../../resources/e_mypage_css/e_leftmenu.css"
+	<link rel="stylesheet" href="/resources/e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
-	<link rel="stylesheet" href="../../../resources/e_mypage_css/star.css" type="text/css"
+	<link rel="stylesheet" href="/resources/e_mypage_css/star.css" type="text/css"
 	media="screen" />
 	
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 
-<script type="text/javascript" src="../../../resources/e_mypage_js/e_info_star.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/e_info.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/e_info2.js"></script>
-<script type="text/javascript" src="../../../resources/e_mypage_js/e_info3.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/e_info_star.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/e_info.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/e_info2.js"></script>
+<script type="text/javascript" src="/resources/e_mypage_js/e_info3.js"></script>
 
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 

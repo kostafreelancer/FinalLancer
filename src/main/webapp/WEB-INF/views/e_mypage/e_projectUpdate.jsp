@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
 	
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_projectInfo.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_projectInfo.css"
 	type="text/css" media="screen" />
-<link rel="stylesheet" href="../../../resources/e_mypage_css/e_leftmenu.css"
+<link rel="stylesheet" href="/resources/e_mypage_css/e_leftmenu.css"
 	type="text/css" media="screen" />
 
 

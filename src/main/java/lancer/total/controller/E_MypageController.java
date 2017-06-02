@@ -1,5 +1,7 @@
 package lancer.total.controller;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lancer.c_login.domain.c_login_enterpriseVO;
+import lancer.e_mypage.domain.Project;
 import lancer.total.service.E_MypageService;
 
 @Controller
@@ -23,11 +26,10 @@ public class E_MypageController {
 	@RequestMapping(value = "/e_info", method = RequestMethod.GET)
 	public void e_infoGET(Model model,HttpSession session){
 		
-	/*	c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
-		System.out.println(enterprise.getE_mail());*/
-		model.addAttribute("client", session.getAttribute("client"));
+		c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
+		model.addAttribute("client", enterprise);
 		
-		/*String[] e_mail = enterprise.getE_mail().split("@");
+		String[] e_mail = enterprise.getE_mail().split("@");
 		model.addAttribute("e_mail_1", e_mail[0]);
 		model.addAttribute("e_mail_2", e_mail[1]);
 				
@@ -53,17 +55,28 @@ public class E_MypageController {
 		String[] e_address = enterprise.getE_address().split("&");
 		model.addAttribute("e_address_1", e_address[0]);
 		model.addAttribute("e_address_2", e_address[1]);
-		model.addAttribute("e_address_3", e_address[2]);*/
+		model.addAttribute("e_address_3", e_address[2]);
 		
 	}
 	
 	@RequestMapping(value = "/e_project", method = RequestMethod.GET)
-	public void e_projectGET(){
+	public void e_projectGET(Model model,HttpSession session) throws Exception{
+		
+		c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
+		int e_num = enterprise.getE_num();
+		System.out.println(e_num + "컨트롤러");
+		List<Project> readyList = service.listProjectReady(e_num);
+		List<Project> doingList = service.listProjectDoing(e_num);
+		List<Project> doneList = service.listProjectDone(e_num);
+		
+		model.addAttribute("readyList", readyList);
+		model.addAttribute("doingList", doingList);
+		model.addAttribute("doneList", doneList);
 		
 	}
 	
 	@RequestMapping(value = "/e_projectInfo", method = RequestMethod.GET)
-	public void e_projectInfoGET(){
+	public void e_projectInfoGET(Model model,HttpSession session){
 		
 	}
 	
