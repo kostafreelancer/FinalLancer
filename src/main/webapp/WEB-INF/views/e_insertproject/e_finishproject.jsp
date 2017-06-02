@@ -9,7 +9,7 @@
 	media="screen" />
 <link rel="stylesheet" href="../common/footer.css" type="text/css"
 	media="screen" />
-<link rel="stylesheet" href="e_insertproject_css/e_insertproject.css"
+<link rel="stylesheet" href="/resources/e_insertproject_js/e_insertproject.css"
 	type="text/css" media="screen" />
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>

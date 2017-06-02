@@ -32,8 +32,8 @@
 	</div>
 	<div class="left_menu_content">
 		<ul class="left_menu_contents">
-			<li><a href="e_infoSelectAction.e_mypage">기업 정보</a></li>
-			<li><a href="e_projectListAction.e_mypage">프로젝트 관리</a></li>
+			<li><a href="/e_info">기업 정보</a></li>
+			<li><a href="/e_project">프로젝트 관리</a></li>
 		</ul>
 	</div>
 	</nav>
@@ -41,7 +41,7 @@
 	<div id="nav">
 		<div class="nav_txt">
 			<p>
-				<a href="/e_lan/index.php">Home</a> <span class="padd">&gt;</span> <span>프로젝트
+				<a href="#">Home</a> <span class="padd">&gt;</span> <span>프로젝트
 					상세</span>
 			</p>
 		</div>

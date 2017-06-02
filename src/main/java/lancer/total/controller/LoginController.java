@@ -13,7 +13,9 @@ import org.springframework.web.multipart.support.RequestPartServletServerHttpReq
 
 import jdk.nashorn.internal.ir.RuntimeNode.Request;
 import lancer.c_login.domain.c_loginVO;
+import lancer.c_login.domain.c_login_enterpriseVO;
 import lancer.c_login.domain.c_login_freelancerVO;
+import lancer.c_login.domain.checking_identity;
 import lancer.f_mypage.domain.Freelancer;
 import lancer.total.service.c_loginService;
 
@@ -31,12 +33,27 @@ public class LoginController {
 	}
 	@RequestMapping(value="/insert.c_login")
 	public String check_login(c_loginVO vo,@ModelAttribute("checking") String checked,Model model,HttpSession session){
+		checking_identity identity = new checking_identity();
 		if(checked.equals("freelancer")){
-			session.setAttribute("client",service.select_f_login(vo));
-		}else{
-			session.setAttribute("client",service.select_e_login(vo));
+			if(service.select_f_login(vo) == null){
+				
+				return "redirect:/c_login/login";
+			}
+			identity.setFree(service.select_f_login(vo));
+			identity.setIdentity(checked);
+			session.setAttribute("client",identity.getFree());
+			session.setAttribute("identity", identity);
+		}else if(checked.equals("enterprise")){
+			if(service.select_e_login(vo) == null){
+				
+				return "redirect:/c_login/login";
+			}
+			identity.setEnter(service.select_e_login(vo));
+			identity.setIdentity(checked);
+			session.setAttribute("client",identity.getEnter());
+			session.setAttribute("identity", identity);
+			return "redirect:/e_main/e_main";
 		}
-		
 		return "redirect:/f_main/f_main";
 	}
 }
