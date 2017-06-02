@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value="/c_membercenter/*")
 public class c_memberCenterController {
 	
-	@RequestMapping(value="/member_centerMain", method=RequestMethod.GET)
+/*	@RequestMapping(value="/member_centerMain", method=RequestMethod.GET)
 	public void getMembercenter(){
 		System.out.println("^^");
 	}
-
+*/
 }

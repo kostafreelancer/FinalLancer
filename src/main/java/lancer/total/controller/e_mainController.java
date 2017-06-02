@@ -20,7 +20,7 @@ public class e_mainController {
 	public void countGET(Model model) throws Exception{
 		
 		model.addAttribute("freelancerNum", e_mainService.countFreelancer());
-/*		model.addAttribute("projectNum", e_mainService.countProject());*/
+		model.addAttribute("projectNum", e_mainService.countProject());
 	}
 
 }
