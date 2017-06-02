@@ -8,8 +8,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import lancer.c_join.domain.E_join;
-import lancer.c_join.domain.F_job;
 import lancer.c_join.domain.F_join;
+import lancer.f_mypage.domain.F_job;
+
 
 @Repository
 public class C_JoinDAOImpl implements C_JoinDAO{
@@ -20,7 +21,7 @@ public class C_JoinDAOImpl implements C_JoinDAO{
 	private static String namespace="lancer.mapper.c_joinMapper";
 
 	@Override
-	public void insertF_join(F_join f_join) throws Exception {
+	public void insertF_join(F_join  f_join) throws Exception {
 		session.insert(namespace+".insertF_join", f_join);		
 	}
 

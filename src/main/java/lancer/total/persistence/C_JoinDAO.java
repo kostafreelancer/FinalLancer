@@ -3,8 +3,8 @@ package lancer.total.persistence;
 import java.util.List;
 
 import lancer.c_join.domain.E_join;
-import lancer.c_join.domain.F_job;
 import lancer.c_join.domain.F_join;
+import lancer.f_mypage.domain.F_job;
 
 public interface C_JoinDAO {
 	//프리랜서
