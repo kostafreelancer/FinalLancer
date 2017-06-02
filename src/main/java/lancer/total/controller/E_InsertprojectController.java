@@ -26,7 +26,7 @@ public class E_InsertprojectController {
 	
 	@RequestMapping(value = "/e_insertproject", method = RequestMethod.POST)
 	public String insertprojectPOST(E_Insert project, Model model, Map<String, Integer> map) throws Exception{
-		
+		System.out.println("ttyfhfg");
 		service.insertProject(project);
 		service.insertP_Job(map);
 		model.addAttribute("project", project);
