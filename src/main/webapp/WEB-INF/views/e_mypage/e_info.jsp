@@ -61,7 +61,7 @@
 	</div>
 
 
-<form action="e_infoUpdateAction.e_mypage?e_num=${client.e_num }" method="post" name="EnterpriseWriteFm">
+<form action="/e_mypage/e_info" method="post" name="EnterpriseWriteFm">
 	<div class="e_info_table1">
 		<h4>아이디 및 비밀번호</h4>
 		
@@ -78,10 +78,10 @@
 				</tr>
 				<tr>
 					<th scope="row" class="ac">비밀번호</th>
-					<td><input type="password" id="e_pwd1" name="e_pwd1" class="wid02">
+					<td><input type="password" id="e_pwd_1" name="e_pwd_1" class="wid02">
 					</td>
 					<th scope="row" class="ac">비밀번호 확인</th>
-					<td><input type="password" id="e_pwd2" name="e_pwd2" class="wid02">
+					<td><input type="password" id="e_pwd_2" name="e_pwd_2" class="wid02">
 					</td>
 				</tr>
 				<tr>
@@ -163,11 +163,11 @@
 				<td><input type="text" id="e_owner" name="e_owner"
 					class="wid" value="${client.e_owner }"></td>
 				<th scope="row">사업자등록번호</th>
-				<td colspan="2"><input type="text" id="regno_1"
-					name="regno_1" class="wid03" value="${regno_1 }" maxlength="3"> <span>-</span>
-					<input type="text" id="regno_2" name="regno_2" class="wid03"
+				<td colspan="2"><input type="text" id="e_regno_1"
+					name="e_regno_1" class="wid03" value="${regno_1 }" maxlength="3"> <span>-</span>
+					<input type="text" id="e_regno_2" name="e_regno_2" class="wid03"
 					maxlength="2" value="${regno_2 }"> <span>-</span> <input type="text"
-					id="regno_3" name="regno_3" class="wid03" maxlength="5"
+					id="e_regno_3" name="e_regno_3" class="wid03" maxlength="5"
 					value="${regno_3 }"></td>
 			</tr>
 			<tr>

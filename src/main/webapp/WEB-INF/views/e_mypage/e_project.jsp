@@ -82,7 +82,7 @@
 					<c:forEach var="p" items="${readyList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_mypage/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>
@@ -128,7 +128,7 @@
 						<c:forEach var="p" items="${doingList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_mypage/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>
@@ -174,7 +174,7 @@
 						<c:forEach var="p" items="${doneList }">
 							<tr>
 								<td class="ac">${p.getE_pr_num()}</td>
-								<td><a href="/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
+								<td><a href="/e_mypage/e_projectInfo?e_pr_num=${p.getE_pr_num()}">${p.getP_name()}</a></td>
 								<td class="ac">${p.getP_requirenum()}</td>
 								<td class="ac">${p.getP_lowerage()} ~ ${p.getP_upperage()}</td>
 								<td class="ac">${p.getP_lowercost()}</td>

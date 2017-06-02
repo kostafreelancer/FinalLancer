@@ -11,7 +11,7 @@
 		SELECT * FROM enterprise WHERE e_num = #{e_num}
 	</select>
 	
-	<update id="updateEnterprise" parameterType="lancer.e_mypage.domain.Enterprise">
+	<update id="updateEnterprise" parameterType="c_login_enterpriseVO">
 		UPDATE enterprise SET
 		e_pwd=#{e_pwd},
 		e_mail=#{e_mail},
@@ -37,19 +37,19 @@
 	</update>
 	
 	<select id="listProjectReady" resultType="lancer.e_mypage.domain.Project">
-		SELECT * FROM project WHERE e_num = #{e_num} AND state = 0
+		SELECT * FROM project WHERE e_num = #{e_num} AND state = '모집중'
 	</select>
 
 	<select id="listProjectDoing" resultType="lancer.e_mypage.domain.Project">
-		SELECT * FROM project WHERE e_num = #{e_num} AND state = 1
+		SELECT * FROM project WHERE e_num = #{e_num} AND state = '진행중'
 	</select>
 
 	<select id="listProjectDone" resultType="lancer.e_mypage.domain.Project">
-		SELECT * FROM project WHERE e_num = #{e_num} AND state = 2
+		SELECT * FROM project WHERE e_num = #{e_num} AND state = '완료'
 	</select>
 
 	<select id="selectProject" parameterType="java.util.HashMap" resultType="lancer.e_mypage.domain.Project">
-		SELECT * FROM e_request_project WHERE e_num = #{e_num} AND e_pr_num = #{e_pr_num}
+		SELECT * FROM project WHERE e_num = #{e_num} AND e_pr_num = #{e_pr_num}
 	</select>
 	
 	<select id="selectP_job" resultType="Integer">

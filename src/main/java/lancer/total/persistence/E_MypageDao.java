@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import lancer.c_login.domain.c_login_enterpriseVO;
 import lancer.e_mypage.domain.Enterprise;
 import lancer.e_mypage.domain.Project;
 
@@ -26,7 +27,7 @@ public class E_MypageDao{
 		return session.selectOne(namespace+".selectEnterprise", e_num);
 	}
 	
-	public void updateEnterprise(Enterprise enterprise) throws Exception {
+	public void updateEnterprise(c_login_enterpriseVO enterprise) throws Exception {
 		session.update(namespace+".updateEnterprise", enterprise);
 	}
 	

@@ -1,10 +1,14 @@
 package lancer.total.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+
+import lancer.c_login.domain.c_login_enterpriseVO;
+import lancer.e_mypage.domain.Enterprise;
 import lancer.e_mypage.domain.Project;
 import lancer.total.persistence.E_MypageDao;
 
@@ -27,7 +31,17 @@ public class E_MypageService{
 		return dao.listProjectDone(e_num);
 	}
 	
+	public Project selectProject(HashMap<String, Integer> map) throws Exception {
+		return dao.selectProject(map);
+	}
 	
+	public List<Integer> selectP_job(int e_pr_num) throws Exception {
+		return dao.selectP_job(e_pr_num);
+	}
+
+	public void updateEnterprise(c_login_enterpriseVO enterprise) throws Exception {
+		dao.updateEnterprise(enterprise);
+	}
 	
 	/*@Transactional
 	@Override

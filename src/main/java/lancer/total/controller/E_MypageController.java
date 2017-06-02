@@ -1,5 +1,6 @@
 package lancer.total.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lancer.c_login.domain.c_login_enterpriseVO;
+import lancer.e_mypage.domain.EnterpriseCommand;
 import lancer.e_mypage.domain.Project;
 import lancer.total.service.E_MypageService;
 
@@ -59,8 +61,103 @@ public class E_MypageController {
 		
 	}
 	
+	@RequestMapping(value = "/e_info", method = RequestMethod.POST)
+	public String e_projectUpdatePOST(EnterpriseCommand command, Model model, HttpSession session) throws Exception {
+
+		//기존 기업정보
+		c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
+	
+		String pwd1 = command.getE_pwd_1();
+		String pwd2 = command.getE_pwd_2();
+		
+		if(pwd1.equals(pwd2)){
+			// 비밀번호와 비밀번호 확인이 일치할 경우 변경
+			System.out.println(pwd1);
+			enterprise.setE_pwd(pwd1);
+		}else{
+			// 일치하지 않을 경우 실패
+			return "redirect:/e_mypage/e_info";
+		}
+		
+		
+		//회사이메일
+		String email1 = command.getE_mail_1();
+		String email2 = command.getE_mail_2();
+		String e_email = email1+"@"+email2;
+		enterprise.setE_mail(e_email);
+
+		enterprise.setE_ownerfile(command.getE_ownerfile());
+		
+		enterprise.setE_name(command.getE_name());
+		
+		enterprise.setE_ename(command.getE_ename());
+		
+		enterprise.setE_owner(command.getE_owner());
+		
+		//사업자번호
+		String regno_1 = command.getE_regno_1();
+		String regno_2 = command.getE_regno_2();
+		String regno_3 = command.getE_regno_3();
+		String e_regno = regno_1 + "-" + regno_2 + "-" + regno_3;
+		enterprise.setE_regno(e_regno);
+		
+		//대표번호
+		String e_phone_1 = command.getE_phone_1();
+		String e_phone_2 = command.getE_phone_2();
+		String e_phone_3 = command.getE_phone_3();
+		String e_phone = e_phone_1 + "-" + e_phone_2 + "-" + e_phone_3;
+		enterprise.setE_phone(e_phone);
+		
+		enterprise.setE_bf(command.getE_bf());
+		
+		enterprise.setManager_name(command.getManager_name());
+		
+		//담당자 핸드폰번호
+		String manager_hphone_1 = command.getManager_hphone_1();
+		String manager_hphone_2 = command.getManager_hphone_2();
+		String manager_hphone_3 = command.getManager_hphone_3();
+		String manager_hphone = manager_hphone_1 + "-" + manager_hphone_2 + "-" + manager_hphone_3;
+		enterprise.setManager_hphone(manager_hphone);
+		
+		//매니저이메일
+		String manager_mail_1 = command.getManager_mail_1();
+		String manager_mail_2 = command.getManager_mail_2();
+		String manager_mail = manager_mail_1 + "@" + manager_mail_2;
+		enterprise.setManager_mail(manager_mail);
+		
+		//회사 주소
+		String e_address_1 = command.getE_address_1();
+		String e_address_2 = command.getE_address_2();
+		String e_address_3 = command.getE_address_3();
+		String e_address = e_address_1 + "&" + e_address_2 + "&" + e_address_3;
+		enterprise.setE_address(e_address);
+		
+		enterprise.setE_homepage(command.getE_homepage());
+		
+		enterprise.setStart_year(command.getStart_year());
+
+		enterprise.setE_enum(command.getE_enum());	
+				
+		enterprise.setE_listing(command.getE_listing());		
+				
+		enterprise.setE_capital(command.getE_capital());
+				
+		enterprise.setE_sales(command.getE_sales());		
+				
+		enterprise.setE_scale(command.getE_scale());		
+				
+		enterprise.setE_licensefile(command.getE_licensefile());		
+				
+		
+		service.updateEnterprise(enterprise);
+		
+		session.setAttribute("client", enterprise);		
+		
+		return "redirect:/e_mypage/e_info";
+	}	
+	
 	@RequestMapping(value = "/e_project", method = RequestMethod.GET)
-	public void e_projectGET(Model model,HttpSession session) throws Exception{
+	public void e_projectGET(Model model, HttpSession session) throws Exception{
 		
 		c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
 		int e_num = enterprise.getE_num();
@@ -76,14 +173,39 @@ public class E_MypageController {
 	}
 	
 	@RequestMapping(value = "/e_projectInfo", method = RequestMethod.GET)
-	public void e_projectInfoGET(Model model,HttpSession session){
+	public void e_projectInfoGET(@ModelAttribute("e_pr_num") int e_pr_num, Model model, HttpSession session) throws Exception {
+
+		c_login_enterpriseVO enterprise = (c_login_enterpriseVO)session.getAttribute("client");
 		
+		// 기업 정보 구하기
+		String[] manager_hphone = enterprise.getManager_hphone().split("-");
+		model.addAttribute("manager_hphone_1", manager_hphone[0]);
+		model.addAttribute("manager_hphone_2", manager_hphone[1]);
+		model.addAttribute("manager_hphone_3", manager_hphone[2]);
+		
+		String[] manager_mail = enterprise.getManager_mail().split("@");
+		model.addAttribute("manager_mail_1", manager_mail[0]);
+		model.addAttribute("manager_mail_2", manager_mail[1]);
+		
+
+		// 프로젝트 정보 구하기
+		
+		int e_num = enterprise.getE_num();
+		
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("e_num", e_num);
+		map.put("e_pr_num", e_pr_num);
+
+		Project project = service.selectProject(map);
+		
+		model.addAttribute("project", project);
+		
+		//상세분야 구하기
+		List<Integer> p_job = service.selectP_job(e_pr_num);
+		model.addAttribute("p_job", p_job);
 	}
 	
-	@RequestMapping(value = "/e_projectUpdate", method = RequestMethod.GET)
-	public void e_projectUpdateGET(){
-		
-	}
+
 	
 	
 	
