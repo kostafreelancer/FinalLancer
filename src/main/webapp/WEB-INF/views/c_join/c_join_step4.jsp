@@ -13,7 +13,6 @@
 
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="../common/header.js"></script>
 </head>
 <body>
 <body onload="member_check();">
@@ -53,7 +52,7 @@
 			</div>
 			<!-- //completion : e -->
 			<div class="btn_box">
-				<a href="../c_login/login.jsp" class="btn_check04"><span> Go Login</a>
+				<a href="../c_login/login" class="btn_check04"><span> Go Login</a>
 			</div>
 		</div>
 		<!-- //content : e -->

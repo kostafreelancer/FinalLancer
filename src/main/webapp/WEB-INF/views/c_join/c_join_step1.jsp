@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="../c_common/footer.css" type="text/css" media="screen" />
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="../common/header.js"></script>
 </head>
 <body>
 <%@include file="../c_common/header.jsp" %>
@@ -79,7 +78,7 @@
 						</li>
 					</ul>
 					<div class="btn_box02">
-						<a href="f_join_step2.jsp" class="btn_join01">개인회원</a>
+						<a href="f_join_step2" class="btn_join01">개인회원</a>
 					</div>
 				</div>
 				<!-- //elan_box : e -->
@@ -96,7 +95,7 @@
 						</li>
 					</ul>
 					<div class="btn_box02 btn_box02_lef">
-						<a href="e_join_step2.jsp" class="btn_join02">기업</a>
+						<a href="e_join_step2" class="btn_join02">기업</a>
 					</div>
 				</div>
 				<!-- //elan_box : e -->

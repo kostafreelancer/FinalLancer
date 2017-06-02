@@ -46,7 +46,7 @@ public class C_JoinController {
 		
 	}
 	@RequestMapping(value="f_join_step3", method=RequestMethod.POST)
-	public void f_joinstep3(F_join f_join, F_job f_job, Model model)throws Exception{
+	public String f_joinstep3(F_join f_join, Model model)throws Exception{
 				
 		String f_hphone1 = f_join.getF_hphone1();
 		String f_hphone2 = f_join.getF_hphone2();
@@ -59,6 +59,7 @@ public class C_JoinController {
 		String f_phone3 = f_join.getF_phone3();
 		String f_phone = f_phone1 +"-"+ f_phone2 +"-"+ f_phone3;
 		f_join.setF_phone(f_phone);
+		System.out.println(f_join.getF_phone());
 		
 		String f_email1 = f_join.getF_email1();
 		String f_email2 = f_join.getF_email2();
@@ -70,49 +71,57 @@ public class C_JoinController {
 		String f_address3=f_join.getF_address3();
 		String f_address=f_address1+"&"+f_address2+"&"+f_address3;
 		f_join.setF_address(f_address);
+		System.out.println(f_join.getF_address());
 		
-		
-		f_join.setF_birth(f_join.getF_birth());
+		//f_join.setF_birth(f_join.getF_birth());
 		f_join.setF_fname("/사진");
-		f_join.setF_id(f_join.getF_id());
+		//f_join.setF_id(f_join.getF_id());
 		//f_join.setF_major(request.getParameter("f_major"));
-		f_join.setF_name(f_join.getF_name());
+/*		f_join.setF_name(f_join.getF_name());*/
 		f_join.setF_nowstate("활동");
 		f_join.setF_num(service.getF_num()+1);
-		f_join.setF_pwd(f_join.getF_pwd());
+		System.out.println(f_join.getF_num());
+/*		f_join.setF_pwd(f_join.getF_pwd());*/
 		f_join.setF_recentlogin("2017/01/05");
 		f_join.setF_score(0);
-		f_join.setF_major(f_join.getF_major());
+/*		f_join.setF_major(f_join.getF_major());*/
 		if(f_join.getF_sex().equals("1")){
 			f_join.setF_sex("남");
 		}else{
 			f_join.setF_sex("여");
 		}
-
-/*		String[] checkBasic = request.getParameterValues("fm_new_keyword[]");
+		System.out.println(f_join.getF_sex());
+		
+		String[] checkBasic = f_join.getFm_new_keyword();
 		int mynum = service.getF_num();
 		for(int i=0;i<checkBasic.length;i++)
 		{
-			dao.insertF_Job(f_job(mynum, Integer.parseInt(checkBasic[i])));
-		}*/
+			service.insertF_Job(new F_job(mynum, Integer.parseInt(checkBasic[i])));
+			System.out.println(checkBasic[i]);
+		}
 		
+		service.insertF_join(f_join);
+		
+		return "redirect:/c_join/c_join_step4";
 	}
 
 
 	@RequestMapping(value="e_join_step3", method=RequestMethod.POST)
-	public void e_joinstep3(E_join e_join, Model model)throws Exception{
+	public String e_joinstep3(E_join e_join, Model model)throws Exception{
 
 		//회사이메일
 		String email1 = e_join.getE_mail1();
 		String email2 = e_join.getE_mail2();
 		String e_email = email1+"@"+email2;
 		e_join.setE_mail(e_email);
+		System.out.println(e_join.getE_mail());
 		
 		//매니저이메일
 		String managermail1 = e_join.getManager_mail1();
 		String managermail2 = e_join.getManager_mail2();
 		String manager_mail = managermail1+"@"+managermail2;
 		e_join.setManager_mail(manager_mail);
+		System.out.println(e_join.getManager_mail());
 		
 		//담당자 핸드폰번호
 		String managerhphone1 = e_join.getManager_hphone1();
@@ -120,6 +129,7 @@ public class C_JoinController {
 		String managerhphone3 = e_join.getManager_hphone3();
 		String manager_hphone=managerhphone1+"-"+managerhphone2+"-"+managerhphone3;
 		e_join.setManager_hphone(manager_hphone);
+		System.out.println(e_join.getManager_hphone());
 		
 		//대표번호e_phone1
 		String e_phone1 = e_join.getE_phone1();
@@ -127,6 +137,7 @@ public class C_JoinController {
 		String e_phone3 = e_join.getE_phone3();
 		String e_phone=e_phone1+"-"+e_phone2+"-"+e_phone3;
 		e_join.setE_phone(e_phone);
+		System.out.println(e_join.getE_phone());
 		
 		//사업자번호
 		String e_regno1 = e_join.getE_regno1();
@@ -144,6 +155,8 @@ public class C_JoinController {
 		e_join.setE_address(e_address);
 		System.out.println(e_join.getE_address());
 		
+		e_join.setE_num(service.getE_num()+1);
+		System.out.println(e_join.getE_num()+1);
 		e_join.setManager_name(e_join.getManager_name());
 		e_join.setE_bf(e_join.getE_bf());
 		e_join.setE_capital(e_join.getE_capital());	
@@ -158,13 +171,16 @@ public class C_JoinController {
 		e_join.setE_score(0);
 		e_join.setE_listing(e_join.getE_listing());
 		e_join.setE_name(e_join.getE_name());
-		e_join.setE_num(service.getE_num()+1);
 		e_join.setE_owner(e_join.getE_owner());
 		e_join.setE_ownerfile(e_join.getE_ownerfile());
 		e_join.setE_pwd(e_join.getE_pwd());
 		e_join.setE_sales(e_join.getE_sales());
 		e_join.setE_scale(e_join.getE_scale());
 		e_join.setStart_year(e_join.getStart_year());
+		
+		service.insertE_join(e_join);
+		
+		return "redirect:/c_join/c_join_step4";
 	}
 
 }

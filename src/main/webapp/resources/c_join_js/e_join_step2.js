@@ -4,7 +4,7 @@ function jsSubmit() {
               return;
           }else{
               var form1 = document.form1;
-              form1.action = "e_join_step3.jsp";
+              form1.action = "e_join_step3";
               form1.submit();
           }
 

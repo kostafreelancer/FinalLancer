@@ -12,9 +12,8 @@
 <link rel="stylesheet" href="../c_common/footer.css" type="text/css" media="screen" />
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="c_join_js/c_join_step3.js"></script>
-<script type="text/javascript" src="../common/header.js"></script>
-<script type="text/javascript" src="c_join_js/f_zipAddress.js"></script>
+<script type="text/javascript" src="../../../resources/c_join_js/c_join_step3.js"></script>
+<script type="text/javascript" src="../../../resources/c_join_js/f_zipAddress.js"></script>
  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 </head>
 <body>
@@ -52,7 +51,7 @@
                     <p class="star_txt"><span class="color_or">(*)</span>표시는 필수 입력사항입니다</p>
                 </div>
                 <table class="tb_st01">
-				<form name="f_userInfo" method="post" action="f_joinAction.f_join">
+				<form name="f_userInfo" method="post" action="f_join_step3" >
 					<input type="hidden" name="fm_type" value="이랜서">
 					<input type="hidden" name="fm_format" value="개인">
 					<input type="hidden" name="fm_str" value="Zm1fbmFtZT0mZm1fanVtaW49LTk5OTk5OSZzdHJWbm89">

@@ -12,8 +12,7 @@
 <link rel="stylesheet" href="../c_common/footer.css" type="text/css" media="screen" />
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script type="text/javascript" src="../common/header.js"></script>
-<script type="text/javascript" src="c_join_js/f_join_step2.js"></script>
+<script type="text/javascript" src="../../../resources/c_join_js/f_join_step2.js"></script>
 </head>
 <body>
 <%@include file="../c_common/header.jsp" %>
