@@ -22,7 +22,17 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="lancer.total.controller" />
-	
-	
+	<beans:bean id="AuthInterceptor" class="lancer.total.interceptor.AuthInterceptor"> </beans:bean>
+	<beans:bean id="LoginInterceptor" class="lancer.total.interceptor.LoginInterceptor"></beans:bean>
+	<interceptors>
+		<interceptor>
+			<mapping path="/f_mypage/*"/>
+			<beans:ref bean="AuthInterceptor"/>
+		</interceptor>
+		<interceptor>
+			<mapping path="/c_login/login"/>
+			<beans:ref bean="LoginInterceptor"/>
+		</interceptor>
+	</interceptors>	
 	
 </beans:beans>

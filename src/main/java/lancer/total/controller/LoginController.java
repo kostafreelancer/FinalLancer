@@ -35,19 +35,19 @@ public class LoginController {
 	public String check_login(c_loginVO vo,@ModelAttribute("checking") String checked,Model model,HttpSession session){
 		checking_identity identity = new checking_identity();
 		if(checked.equals("freelancer")){
-			if(service.select_f_login(vo) == null){
+			/*if(service.select_f_login(vo) == null){
 				
 				return "redirect:/c_login/login";
-			}
+			}*/
 			identity.setFree(service.select_f_login(vo));
 			identity.setIdentity(checked);
 			session.setAttribute("client",identity.getFree());
 			session.setAttribute("identity", identity);
 		}else if(checked.equals("enterprise")){
-			if(service.select_e_login(vo) == null){
+		/*	if(service.select_e_login(vo) == null){
 				
 				return "redirect:/c_login/login";
-			}
+			}*/
 			identity.setEnter(service.select_e_login(vo));
 			identity.setIdentity(checked);
 			session.setAttribute("client",identity.getEnter());
