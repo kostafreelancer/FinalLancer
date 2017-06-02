@@ -25,7 +25,7 @@
 			<ul class="header_top_menus">
 				<li><img alt="center_img"
 					src="/resources/c_common_img/header_center_icon.jpg">
-					<a href="f_name.mc">고객
+					<a href=${pageContext.request.contextPath}"/c_membercenter/member_centerMain">고객
 						센터</a></li>
 	
 				<li><img alt="log_img"
@@ -34,7 +34,7 @@
 				<li><img alt="home_img"
 					src="/resources/c_common_img/header_home_icon01.jpg">
 					<!-- <a href="/Matching_Project/e_main/e_main.jsp">홈</a></li> -->
-					<a href="e_maincount.e_main">홈</a></li>
+					<a href=${pageContext.request.contextPath}"/e_main/e_main">홈</a></li>
 			</ul>
 
 		</div>
@@ -58,19 +58,17 @@
 			</ul>
 		</div>
 
-
-
 		<div class="header_menu">
 			<ul class="header_menus_e">
-				<li><a href="insertForm.e_insertproject">프로젝트
+				<li><a href=${pageContext.request.contextPath}"/e_insertproject/e_insertproject">프로젝트
 						등록</a></li>
 				<li><a href="/Matching_Project/c_projectlist/project_list.jsp">프로젝트
 						목록</a></li>
 				<li><a href="freelist.f_list">프리랜서 목록</a></li>
-				<li><a href="e_infoSelectAction.e_mypage">마이페이지</a></li>
+				<li><a href=${pageContext.request.contextPath}"/e_mypage/e_info">마이페이지</a></li>
 				<li><a href="/Matching_Project/c_using/service.jsp">이용
 						방법</a></li>
-
+SS
 			</ul>
 		</div>
 		<!--헤드 메뉴 -->
