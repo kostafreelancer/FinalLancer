@@ -21,17 +21,17 @@
 			<ul class="header_top_menus">
 				<li><img alt="center_img"
 					src="/resources/c_common_img/header_center_icon.jpg"> <a
-					href="/c_membercenter/member_centerMain">고객 센터</a></li>
+					href=${pageContext.request.contextPath}"/c_membercenter/member_centerMain">고객 센터</a></li>
 				<li class="header_join"><img alt="join_img"
 					src="/resources/c_common_img/header_join_icon.jpg"> <a
-					href="c_join/c_join_step1">회원가입</a></li>
+					href=${pageContext.request.contextPath}"/c_join/c_join_step1">회원가입</a></li>
 				<li class="login_checking"><img alt="log_img"
 					src="/resources/c_common_img/header_log_icon01.jpg"> <a
-					href="c_login/login">로그인</a></li>
+					href=${pageContext.request.contextPath}"/c_login/login">로그인</a></li>
 
 				<li><img alt="home_img"
 					src="/resources/c_common_img/header_home_icon01.jpg"> <a
-					href="f_main/f_main">홈</a></li>
+					href=${pageContext.request.contextPath}"/f_main/f_main">홈</a></li>
 			</ul>
 
 		</div>
@@ -75,8 +75,8 @@
 						<c:when test="${identity.identity == 'freelancer' }">
 							<a href="showScheduleInfo.f_mypage?f_num=${client.f_num}">
 						</c:when>
-						<c:otherwise>
-							<a href="remove_session.c_login">
+						<c:otherwise>s
+							<a href=${pageContext.request.contextPath}"/f_mypage/myInfo">
 						</c:otherwise>
 					</c:choose>마이페이지</a></li>
 				<li><a href="/Matching_Project/c_using/service.jsp">이용 방법</a></li>
