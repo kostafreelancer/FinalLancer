@@ -445,7 +445,7 @@ $(function(){
 											<td class="td_bor_bott">&nbsp;</td>
 										</tr>
 									</tbody>
-								</table> <!--img src="../img/sb_category.gif" width="87" height="18" align="absmiddle"-->
+								</table> <!--img src="../img/ sb_category.gif" width="87" height="18" align="absmiddle"-->
 							</td>
 						</tr>
 						<tr class="line_bottom" id="last_table">
