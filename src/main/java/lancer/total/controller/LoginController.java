@@ -35,6 +35,7 @@ public class LoginController {
 			session.setAttribute("client",service.select_f_login(vo));
 		}else{
 			session.setAttribute("client",service.select_e_login(vo));
+			return "redirect:/e_main/e_main";
 		}
 		
 		return "redirect:/f_main/f_main";
