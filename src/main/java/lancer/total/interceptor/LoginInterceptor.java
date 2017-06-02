@@ -25,16 +25,15 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 			req.getSession().setAttribute("dest", uri+query);
 		}
 	}
-	
+		
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		HttpSession session = request.getSession();
-		if(session.getAttribute("login") == null){
-			logger.info("clear login data before");
-			System.out.println("clear login data before");
+		if(session.getAttribute("identity") == null){
+			System.out.println("로그인이 되지 않았습니다.");
 			saveDest(request); 
-			response.sendRedirect("/user/login");
+			response.sendRedirect("/c_login/login");
 			return false;
 		}
 		return true;
