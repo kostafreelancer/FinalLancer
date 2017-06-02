@@ -4343,8 +4343,8 @@ th.th_bor0 {
 .log_rit .log_txt01{font-size:16px;display:block}
 .log_rit .log_txt02{font-size:20px;color:#f05922}
 .log_rit ul li{line-height:20px}
-.btn_join{width:160px;background:url(../../c_login/c_login_img/bg_join.jpg) no-repeat; padding:15px 0; text-align:center; font-size:20px; color:#fff; display:block;float:right}
->>>>>>> 9cffe6be1feca6357727c1c4afa162d2250a0032:WebContent/c_join/c_join_css/join.css
+.btn_join{width:160px;background:url(/resources/c_login_img/bg_join.jpg) no-repeat; padding:15px 0; text-align:center; font-size:20px; color:#fff; display:block;float:right}
+ 
 
 .snb li a {
 	width: 200px;
