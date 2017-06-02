@@ -67,7 +67,7 @@
 				<div class="tb_box">
 					<h4>담당자 정보</h4>
 					<table class="tb_st01">
-						<form action="insertAction.e_insertproject" method="post" name="ProjectWriteFm">
+						<form method="post" name="ProjectWriteFm">
 						<input type="hidden" name="e_num" value="${client.e_num }"></input>
 							<tbody>
 								<tr>
