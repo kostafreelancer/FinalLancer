@@ -43,7 +43,7 @@
 		<div id="nav">
 			<div class="nav_txt">
 				<p>
-					<a href="/e_lan/index.php">Home</a> <span class="padd">&gt;</span>
+					<a href="#">Home</a> <span class="padd">&gt;</span>
 					<span>프로젝트 상세</span>
 				</p>
 			</div>
